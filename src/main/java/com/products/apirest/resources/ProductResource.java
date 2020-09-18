@@ -28,4 +28,9 @@ public class ProductResource {
         return productRepository.save(product);
     }
 
+    @DeleteMapping
+    public void deleteProduct(@RequestBody Product product){
+        productRepository.delete(product);
+    }
+
 }
